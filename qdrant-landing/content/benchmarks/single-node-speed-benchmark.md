@@ -4,7 +4,7 @@ id: 1
 title: Single node speed benchmark
 description: We benchmarked several engines using various configurations of them on 3 different datasets to check how the results may vary. Those datasets may have different vector dimensionality but also vary in terms of the distance function being used. We also tried to capture the difference we can expect while using some different configuration parameters, for both the engine itself and the search operation separately. It is also quite interesting to see how the number of search threads may impact the performance of the engines, so we added that option as well.
 
-data: /benchmarks/result-2022-08-10.json
+data: /benchmarks/result-2023-07-05.json
 preview_image: /benchmarks/benchmark-1.png
 date: 2022-08-23
 weight: 2

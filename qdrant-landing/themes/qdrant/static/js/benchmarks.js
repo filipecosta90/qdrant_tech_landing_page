@@ -17,6 +17,7 @@ let lowerIsBetterMap = {
   "rps": false,
   "mean_precisions": false,
   "mean_time": true,
+  "p50_time": true,
   "p95_time": true,
   "p99_time": true,
   "upload_time": true,
@@ -32,7 +33,8 @@ const normalizedTitles = {
   mean_precisions: 'Precision',
   total_upload_time: 'Upload + Index Time (s)',
   upload_time: 'Upload Time (s)',
-  mean_time: 'Latency (s)',
+  mean_time: 'Avg. Latency (s)',
+  p50_time: 'P50 (s)',
   p95_time: 'P95 (s)',
   p99_time: 'P99 (s)'
 }
