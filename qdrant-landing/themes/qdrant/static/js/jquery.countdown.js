@@ -156,20 +156,20 @@
                 this.remove();
                 return;
             }
-            this.totalSecsLeft = this.finalDate.getTime() - new Date().getTime();
-            this.totalSecsLeft = Math.ceil(this.totalSecsLeft / 1e3);
-            this.totalSecsLeft = this.totalSecsLeft < 0 ? 0 : this.totalSecsLeft;
+            this.totalmean_timeLeft = this.finalDate.getTime() - new Date().getTime();
+            this.totalmean_timeLeft = Math.ceil(this.totalmean_timeLeft / 1e3);
+            this.totalmean_timeLeft = this.totalmean_timeLeft < 0 ? 0 : this.totalmean_timeLeft;
             this.offset = {
-                seconds: this.totalSecsLeft % 60,
-                minutes: Math.floor(this.totalSecsLeft / 60) % 60,
-                hours: Math.floor(this.totalSecsLeft / 60 / 60) % 24,
-                days: Math.floor(this.totalSecsLeft / 60 / 60 / 24) % 7,
-                totalDays: Math.floor(this.totalSecsLeft / 60 / 60 / 24),
-                weeks: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7),
-                months: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30),
-                years: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 365)
+                seconds: this.totalmean_timeLeft % 60,
+                minutes: Math.floor(this.totalmean_timeLeft / 60) % 60,
+                hours: Math.floor(this.totalmean_timeLeft / 60 / 60) % 24,
+                days: Math.floor(this.totalmean_timeLeft / 60 / 60 / 24) % 7,
+                totalDays: Math.floor(this.totalmean_timeLeft / 60 / 60 / 24),
+                weeks: Math.floor(this.totalmean_timeLeft / 60 / 60 / 24 / 7),
+                months: Math.floor(this.totalmean_timeLeft / 60 / 60 / 24 / 30),
+                years: Math.floor(this.totalmean_timeLeft / 60 / 60 / 24 / 365)
             };
-            if (this.totalSecsLeft === 0) {
+            if (this.totalmean_timeLeft === 0) {
                 this.stop();
                 this.dispatchEvent("finish");
             } else {

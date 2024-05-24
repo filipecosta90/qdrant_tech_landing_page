@@ -5,7 +5,7 @@
 
   </select>
 
-  <label for="parallel-selector-{{ .Params.id }}">Search threads:</label>
+  <label for="parallel-selector-{{ .Params.id }}">Client count:</label>
   <select name="parallel" id="parallel-selector-{{ .Params.id }}" onchange="renderSelected('{{ .Params.id }}')">
   </select>
 
@@ -29,8 +29,13 @@
 
   <label>
     <input type="radio" name="plot-value-{{ .Params.id }}" value="total_upload_time"  onclick="renderSelected('{{ .Params.id }}', this.value)"/>
-    Index time
+    Index time (s)
   </label>
+<!-- 
+  <label>
+    <input type="radio" name="plot-value-{{ .Params.id }}" value="total_memory_usage"  onclick="renderSelected('{{ .Params.id }}', this.value)"/>
+    Total Memory Usage (B)
+  </label> -->
 
 
   <canvas id="chart-{{ .Params.id }}"></canvas>
@@ -75,6 +80,7 @@
             display: true,
             text: 'Precision'
           },
+          // min: 0,
         },
         y: {
           type: 'linear',
@@ -82,6 +88,7 @@
             display: true,
             text: ''
           },
+          min: 0,
         }
       },
       plugins: {

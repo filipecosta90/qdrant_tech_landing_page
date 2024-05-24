@@ -119,6 +119,7 @@ function getPrecisionVsValue(data, key) {
   // sort by x
   vals.sort((a, b) => a.x - b.x);
   vals = filterBestPoints(vals, lowerIsBetterMap[key])
+  console.log(vals)
 
 
   return vals;
@@ -126,7 +127,7 @@ function getPrecisionVsValue(data, key) {
 
 function getPlotDataForEngine(data, engine, key) {
   let filtered = filterData(data, {"engine_name": engine});
-
+  console.log('engine %s. data %v',engine,getPrecisionVsValue(filtered, key));
 
   return {
     label: engine,
